@@ -1,0 +1,10 @@
+---
+applications:
+- name: mutants-detect-project
+  memory: 768M
+  random-route: true
+  path: ../target/mutants-detect-project-cf.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud,mysql
+  services:
+  - mutants-detect-project-db
